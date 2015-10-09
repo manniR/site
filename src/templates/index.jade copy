@@ -1,0 +1,129 @@
+doctype html
+html
+	
+	head(lang="en")
+		title Manfred Raggl digitalArtist
+		meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;")
+		// if lt IE 9
+			script(type="text/javascript", src="js/html5shiv.js")
+		link(rel="stylesheet", href="css/main.css", type="text/css")
+	body
+		
+		header
+			h1 Manfred Raggl 
+				span digitalArtist
+			nav
+				ul
+					li.button 
+						a(href='#projects') Work
+					li.button 
+						a(href='#about') About
+					li.button 
+						a(href='#contact') #[i.fa.fa-envelope-o]
+
+			
+			.box
+				span Film
+				span Animation
+				span Postproduction
+				span Programming
+				span Web
+		section.main
+			#work
+				h2 Work
+				#projects
+					.project
+						.img-holder
+							img(src="img/gewalt-im-alter.jpg")
+						.info
+							h3 Gewalt im Alter
+							p.client #[span Kunde:] Medienwerkstatt
+							p.tags 
+								span Kamera
+								span Postproduktion
+								span DCP
+					.project
+						.img-holder
+							img(src="img/sandoz.jpg")
+						.info
+							h3 Sandoz - Intro Imagefilm
+							p.client #[span Kunde:] Filmatelier
+							p.tags 
+								span Animation
+					.project
+						.img-holder
+							img(src="img/alpenvorland.jpg")
+						.info
+							h3 Alpenvorland
+							p.client #[span Kunde:] Fabian Kametz - Tiroler Landestheater
+							p.tags 
+								span Animation
+					.project
+						.img-holder
+							img(src="img/arno_stern_dvd_box.jpg")
+						.info
+							h3 Arno Stern - Die Wiener Vortragsreihe
+							p.client #[span Kunde:] Welt der Kinder
+							p.tags 
+								span Postproduktion
+								span DVD Produktion / Mastering							
+					.project
+						.img-holder
+							img(src="img/bilding-kinospot.jpg")
+						.info
+							h3 bilding - Kinospot
+							p.client #[span Kunde:] bilding Kunst- und Architekturschule
+							p.tags 
+								span Animation
+								span Postproduktion							
+					.project
+						.img-holder
+							img(src="img/naturfilmtage.jpg")
+						.info
+							h3 Naturfilmtage - Kinospots
+							p.client #[span Kunde:] MediaT
+							p.tags 
+								span Animation
+								span Postproduktion							
+			
+			#about
+				h2 About
+				img(src="img/manfred-raggl.png")
+				.me
+					p 
+						| Manfred Raggl - freischaffender Digital Artist in Innsbruck
+						br
+						| Eadweard Muybridges serielle Fotografie inspirierte auch mich das 'Running Horse'brachte mich von der Fotografie zum animierten Bild
+						| Animation, Compositing, DVD Authoring, Programmierung PHP/JS/HTML/CSS
+
+
+
+			#contact
+				h2 Contact
+				form#form.form(action="#" method="get")
+					ul
+						li
+							label(for="name") Name:
+							input(type="text" placeholder="Name" id="name" name="name" tabindex="1")
+						li
+							label(for="email") Email:
+							input(type="email" placeholder="Email" id="email" name="email" tabindex="2")
+						li
+							label(for="message") Nachricht:
+							textarea(placeholder="Nachricht..." id="message" name="message" tabindex="3")
+					input(type="submit", value="Absenden", id="submit")
+
+		footer
+
+		script(type="text/javascript", src="js/libs.js")
+		
+		//- script(type="text/javascript", src="src/js/vendor/jquery.stellar.min.js")
+
+		script(type="text/javascript", src="js/bundle.js")
+
+		//- script(type="text/javascript", src="js/test.js")
+		// if IE
+			script(type="text/javascript", src="js/placeholder.js")

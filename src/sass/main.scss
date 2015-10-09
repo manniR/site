@@ -1,0 +1,295 @@
+@import "variables";
+// @import "normalize";
+@import "compass";
+@import "susy";
+@import "breakpoint";
+@import "fonts";
+@import "compass/reset";
+//@import "font-awesome-sass";
+@import "font-awesome.min";
+
+@import "form";
+
+// colors
+$bg_page: #282828;
+$bg_main: #dedede;
+$white: #eee;
+
+//breakpoints
+$desktop:800px;
+
+// configuring Susy Defaults
+$susy: (
+	columns: 9,
+	column-width:6.4em,
+	gutters:0,
+	global-box-sizing: border-box,
+	
+	);
+
+body{
+	@include border-box-sizing;
+	font-family: Roboto, sans-serif;
+	font-weight: 100;
+	font-size: 1em;
+	line-height: 1.5em;
+	background: $bg_page;
+	position: relative;
+	@include breakpoint(555px) {
+	}	
+} 
+a{
+	text-decoration: none;
+	color:inherit;
+}
+header {
+	@include container; 
+	position: relative;
+	// z-index: -1;
+	//background: url(../img/race-horse-eadweard-muybridge.jpg);
+	@include background(linear-gradient(top left, rgba(0,0,0,.5),rgba(0,0,0,.5)),image-url('../img/race-horse-eadweard-muybridge.jpg'));
+	@include background-size(cover);
+	background-repeat: no-repeat;
+	min-height: 40em;
+	color: $white;
+	// .raceHorse{
+	// 	position:absolute;
+	// 	z-index: -1;
+	// 	width: 100%;
+	// 	min-height: 500px;
+	// 	overflow: hidden;
+	// 	@include background(linear-gradient(top left, rgba(0,0,0,.5),rgba(0,0,0,.5)),image-url('../img/race-horse-eadweard-muybridge.jpg'));
+	// 	@include background-size(cover);
+	// 	background-repeat: no-repeat;
+	// }
+
+	h1 {
+		font-size: 1.65em;
+		line-height: 1.7em;
+		font-weight: 100;
+		padding: 1em 0 0 0.2em;
+		//@include span(full);		
+		text-align: center;
+		@include breakpoint($desktop) { 
+			@include  span(5 of 10);
+			padding:1em 0 1em 1em;
+			text-align: left;
+		}
+	}
+	nav {
+		
+		@include span(full);
+		padding-left:1em;
+		text-align: center;
+		@include breakpoint($desktop) { 
+			@include  span(5 of 10 last);
+			padding-left:0em;
+		}
+
+		ul{
+			display: inline-block;
+			margin: 0 auto;
+			@include breakpoint($desktop) { 
+				float:right;
+			}
+		li{
+			float:left;
+			padding:1.3em 0;
+			@include breakpoint($desktop) {	
+				&:last-child{padding-right: 1em;};
+			}
+			a{	
+				font-weight: 100;
+				font-size: 1.3em;
+				line-height: 2.7em;
+				padding:1em;
+				&:first-child{padding-left:0.3em;}
+				@include breakpoint($desktop) {
+					padding:1em;
+				}
+				text-transform: uppercase;
+			}	
+		}
+	}
+	}
+	.box {
+		clear: both;
+	    margin: 0 auto;
+	    display: inline-block;
+	    background-color: rgba(11,11,11,0.3);
+	    text-align: center;
+	    /* padding: 1em; */
+	    position: relative;
+	    left: 50%;
+	    font-weight: 100;
+	    border: 1px solid #eee;
+
+		@include transform(translate(-50%,400%));
+
+		span {
+			padding: 1em;
+    		line-height: 2em;
+		}
+	}
+}
+
+section.main {
+	background: $bg_main;
+	@include border-box-sizing;
+	@include container;
+	h2{
+		font-size: 1.65em;
+		line-height: 1.7em;
+		font-weight: 100;
+		text-transform: uppercase;
+		padding:1.5em 0 0.8em 1em;
+	}
+	#work {
+		@include pie-clearfix;
+		#projects {
+			// @include container(55.6em);
+			.project{
+				@include gallery(3 of 6);
+				position: relative;
+				margin-bottom:2em;
+				.img-holder {
+					position:relative;
+					img {
+						position: relative;
+						top: 0;
+						left: 0;
+						z-index: 1;
+						width: 100%;
+						height: auto;
+					}
+				}
+				.vimeoplayer{
+					.fa {
+					    position: absolute;
+					    z-index: 2;
+					    top: 50%;
+					    left: 50%;
+					    font-size: 4em;
+					    color: rgba(222,222,222,0.8);
+					    margin-top: -0.5em;
+					    margin-left: -0.4em;
+					}
+					.iframe{
+						position:absolute;
+						top: 0;
+						left: 0;
+						z-index: 3;
+						display: none;
+					}
+
+				}
+				
+				// .link img{
+				// 	background: black;
+				// 	position: relative;
+				// 	top:0;
+				// 	left:0;
+				// 	min-width: 100%;
+				// 	min-height: 99%;
+				// 	opacity: 1;
+					
+					
+				// 	//@include transition(opacity, 0.2s ease-out);
+				// 	&:hover{
+				// 		@include opacity(0.5);
+				// 		cursor: pointer;
+
+
+				// 	}
+				.link{
+					.fa {
+					    position: absolute;
+					    z-index: 2;
+					    top: 50%;
+					    left: 50%;
+					    font-size: 4em;
+					    color: rgba(222,222,222,0.9);
+					    margin-top: -0.5em;
+					    margin-left: -0.4em;
+					}
+				}
+
+				.dark {
+					.fa {
+						color: rgba(22,22,22,0.7);
+					}
+				}
+				h3 {
+					font-weight: 100;
+					font-size: 1em;
+					line-height: 1.5em;
+					padding: 0 1em;
+				}
+
+				p {
+					padding: 0 1em;
+					font-weight: 100;
+					font-size: 1em;
+					line-height: 1.2em;
+				}
+				.client	> span {
+						font-weight: 700;
+						color:222;
+						text-transform: uppercase;
+						font-size: 0.65em;
+				}
+				.tags {
+					span{
+						padding:0.3em 0.6em 0.3em 0;
+						// margin-right:0.1em;
+						font-size: 0.7em;
+						//background:#666;
+						// border:0.1px solid #666;
+						//color:$white; 
+						text-transform: uppercase;
+
+					}
+				}
+			}
+		}
+	}
+	#contact{
+		@include pie-clearfix;
+	}
+	#about{
+		@include pie-clearfix;
+		margin-bottom: 3em;
+		img{
+			//@include span(2 of 9 )
+			float:left;
+		}
+		.me{
+			
+			@include span(7 of 9);
+			padding: 0 1em;
+		}
+
+	}
+}
+footer{
+	@include container;
+	text-align: center;
+	color:$bg-main;
+	div{
+		padding: 0 1.5em;
+		@include breakpoint(555px) {
+			padding: 0;
+		}
+
+		h3 {
+			line-height: 3em;
+	    	margin: 5em 0;
+	    	font-size: 1em;
+		}
+	}
+
+}
+
+
+
+

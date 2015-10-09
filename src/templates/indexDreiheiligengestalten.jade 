@@ -1,0 +1,183 @@
+﻿doctype html
+html
+
+	head(lang="en")
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title Manfred Raggl digitalArtist
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;")
+		// if lt IE 9
+			script(type="text/javascript", src="js/html5shiv.js")
+		link(rel="stylesheet", href="css/main.css", type="text/css")
+	body
+		
+		header
+			h1 Manfred Raggl 
+				span digitalArtist
+			nav
+				ul
+					li.button 
+						a(href='#projects') Work
+					li.button 
+						a(href='#about') About
+					li.button 
+						a(href='#contact') #[i.fa.fa-envelope-o]
+
+			
+			.box
+				span Film
+				span Animation
+				span Postproduction
+				span Programming
+				span Web
+		section.main
+			#work
+				h2 Work
+				#projects
+					.project
+						.img-holder
+							img(src="img/gewalt-im-alter.jpg")
+						.info
+							h3 Gewalt im Alter
+							p.client #[span Kunde:] Medienwerkstatt
+							p.tags 
+								span Kamera
+								span Postproduktion
+								span DCP
+					.project
+						.img-holder
+							img(src="img/sandoz.jpg")
+						.info
+							h3 Sandoz - Intro Imagefilm
+							p.client #[span Kunde:] Filmatelier
+							p.tags 
+								span Animation
+					.project
+						.img-holder
+							img(src="img/alpenvorland.jpg")
+						.info
+							h3 Alpenvorland
+							p.client #[span Kunde:] Fabian Kametz - Tiroler Landestheater
+							p.tags 
+								span Animation
+
+					.project
+						.img-holder
+							img(src="img/arno_stern_dvd_box.jpg")
+						.info
+							h3 Arno Stern - Die Wiener Vortragsreihe
+							p.client #[span Kunde:] Welt der Kinder
+							p.tags 
+								span Postproduktion
+								span DVD Produktion / Mastering							
+					.project
+						.img-holder
+							img(src="img/bilding-kinospot.jpg")
+						.info
+							h3 bilding - Kinospot
+							p.client #[span Kunde:] bilding Kunst- und Architekturschule
+							p.tags 
+								span Animation
+								span Postproduktion
+					.project
+						.img-holder
+							img(src="img/symposium2014.jpg")
+						.info
+							h3 Videos Kindheit, Jugend, Gesellschaft Symposium 2014
+							p.client #[span Kunde:] Welt der Kinder
+							p.tags 
+								span Schnitt
+								span Postproduktion							
+					.project
+						.img-holder
+							img(src="img/naturfilmtage.jpg")
+						.info
+							h3 Naturfilmtage - Kinospots
+							p.client #[span Kunde:] MediaT
+							p.tags 
+								span Animation
+								span Postproduktion	
+					.project
+						.img-holder
+							img(src="img/pokos.jpg")
+						.info
+							h3 Pokos - Kinospot
+							p.client #[span Kunde:] Photography Robert Fleischanderl
+							p.tags 
+								span Animation
+								span Postproduktion
+
+					.project
+						.img-holder
+							img(src="img/freiestheater.png")
+						.info
+							h3 Freiestheater - Homepage
+							p.client #[span Kunde:] Freiestheater Innsbruck
+							p.tags 
+								span Programmierung
+
+					.project
+						.img-holder
+							img(src="img/schmittundlair.jpg")
+						.info
+							h3 Schmitt und Lair Hompege
+							p.client #[span Kunde:] Medienwerkstatt
+							p.tags 
+								span Programmierung
+			
+			#about
+				h2 About
+				img(src="img/manfred-raggl.png")
+				.me
+					p 
+						| Manfred Raggl - freischaffender Digital Artist 
+						br
+						| lebt und arbeitet in Innsbruck
+
+			#contact
+				h2 Contact
+				form#form.form(action="send.php" method="post")
+					ul
+						li
+							label(for="name") Name:
+							input(type="text" placeholder="Name" id="name" name="name" tabindex="1" required)
+						li
+							label(for="email") Email:
+							input(type="email" placeholder="Email" id="email" name="email" tabindex="2" required)
+						li
+							label(for="message") Nachricht:
+							textarea(placeholder="Nachricht..." id="message" name="message" tabindex="3" required)
+					input(type="submit", value="Absenden", id="submit")
+					
+		footer
+			div
+				h3 Manfred Raggl digitalArtist • Dreiheiligenstraße 17 • 6020 Innsbruck • Austria
+				p Kreativgemeinschaft drei heiligen gestalten 
+					ul
+						li
+							a(href="www.hofergrafik.at") hofergrafik
+						li
+							a(href="www.medienwerkstatt.cc") medienwerkstatt
+						li
+							a(href="www.simonwint.com") Simon Wint
+						li
+							a(href="www.christianreiter.at") Christian Reiter 
+						li
+							a(href="www.sirene.com") René Stieger 
+						li
+							a(href="#") Karin Rogen
+
+
+
+
+		script(type="text/javascript", src="js/libs.js")
+		
+		//- script(type="text/javascript", src="src/js/vendor/jquery.stellar.min.js")
+
+		script(type="text/javascript", src="js/bundle.js")
+
+		//- script(type="text/javascript", src="js/test.js")
+		// if IE
+			script(type="text/javascript", src="js/placeholder.js")
